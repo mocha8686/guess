@@ -1,3 +1,3 @@
 # Guess
 
-Time to guess a number in C++
+Time to guess a number in C++ or C
