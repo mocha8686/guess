@@ -33,6 +33,6 @@ int main()
 	}
 	else
 	{
-		printf("Answer: %d\n", ans);
+		printf("Answer: %d", ans);
 	}
 }
