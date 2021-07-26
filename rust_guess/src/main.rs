@@ -6,9 +6,9 @@ fn main() {
     let ans = rand::thread_rng().gen_range(1, 101);
     let mut score = 20;
 
-    while score > 0 {
-        println!("Guess the number between 1-100:");
+    println!("Guess the number between 1-100:");
 
+    while score > 0 {
         // Create guess
         let mut guess = String::new();
 
@@ -17,13 +17,19 @@ fn main() {
             .expect("Failed to read line");
 
         // String -> u32 / continue if NaN
-        let guess: u32 = match guess.trim().parse() {
+        let guess: i32 = match guess.trim().parse() {
             Ok(num) => num,
             Err(_) => {
                 println!("Not a number");
                 continue;
             },
         };
+
+        // Continue if guess is out of range
+        if guess < 1 || guess > 100 {
+            println!("Guess out of range 1-100.");
+            continue;
+        }
 
 
         // Break if correct, else say higher or lower
