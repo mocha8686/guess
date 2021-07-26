@@ -1,4 +1,6 @@
 guesscpp
 guessc
 tags
-rust_guess/target
+rust_guess/target/
+rust_guess/debug/
+rust_guess/Cargo.lock
